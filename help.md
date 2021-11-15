@@ -10,8 +10,11 @@
 
 # Start new site
 [FULL DOC](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll#creating-your-site)
+- run
 ```
 mkdir docs
 cd docs
 jekyll new --skip-bundle .
 ```
+- edit Gemfile
+- `bundle install`
