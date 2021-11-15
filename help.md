@@ -24,3 +24,6 @@ jekyll new --skip-bundle .
 
 - `bundle exec jekyll serve`
 - open http://localhost:4000 
+
+# Theme doc
+[DOC](https://mmistakes.github.io/minimal-mistakes/docs/configuration/)
