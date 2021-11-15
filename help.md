@@ -18,3 +18,9 @@ jekyll new --skip-bundle .
 ```
 - edit Gemfile
 - `bundle install`
+
+# Testing
+[FULL DOC](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll)
+
+- `bundle exec jekyll serve`
+- open http://localhost:4000 
