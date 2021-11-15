@@ -6,7 +6,7 @@
 - rerun terminal
 
 ## Install Jekyll
-- use doc https://jekyllrb.com/docs/installation/macos/
+- use [DOC](https://jekyllrb.com/docs/installation/macos/)
 
 # Start new site
 [FULL DOC](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll#creating-your-site)
