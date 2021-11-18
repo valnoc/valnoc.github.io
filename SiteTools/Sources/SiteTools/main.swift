@@ -6,10 +6,16 @@ let repoLocalAbsolutePath = CommandLine.arguments[1]
 
 let fileManager = FileManager.default
 
-guard let resourcesURLsEnumerator = fileManager.enumerator(atPath: repoLocalAbsolutePath + "/resources") else {
+let resourcesFolderPath = repoLocalAbsolutePath + "/resources"
+guard let resourcesPathEnumerator = fileManager.enumerator(atPath: resourcesFolderPath) else {
     print("failed to create enumerator for resources folder")
     throw NSError()
 }
 
-var resourcesURLs = [URL]()
-print(resourcesURLs)
+var resourcesPaths = [String]()
+while let file = resourcesPathEnumerator.nextObject() as? String {
+    guard file.hasSuffix(".md") else { continue }
+    resourcesPaths.append(resourcesFolderPath.appending(file))
+}
+
+print(resourcesPaths)
