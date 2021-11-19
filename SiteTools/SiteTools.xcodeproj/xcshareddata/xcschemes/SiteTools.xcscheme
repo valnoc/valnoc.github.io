@@ -14,24 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "SiteTools"
+               BlueprintIdentifier = "5B9FE08E2747B118002BF8DD"
                BuildableName = "SiteTools"
                BlueprintName = "SiteTools"
-               ReferencedContainer = "container:">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "SiteToolsTests"
-               BuildableName = "SiteToolsTests"
-               BlueprintName = "SiteToolsTests"
-               ReferencedContainer = "container:">
+               ReferencedContainer = "container:SiteTools.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -42,16 +28,6 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "SiteToolsTests"
-               BuildableName = "SiteToolsTests"
-               BlueprintName = "SiteToolsTests"
-               ReferencedContainer = "container:">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -68,10 +44,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "SiteTools"
+            BlueprintIdentifier = "5B9FE08E2747B118002BF8DD"
             BuildableName = "SiteTools"
             BlueprintName = "SiteTools"
-            ReferencedContainer = "container:">
+            ReferencedContainer = "container:SiteTools.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <CommandLineArguments>
@@ -91,10 +67,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "SiteTools"
+            BlueprintIdentifier = "5B9FE08E2747B118002BF8DD"
             BuildableName = "SiteTools"
             BlueprintName = "SiteTools"
-            ReferencedContainer = "container:">
+            ReferencedContainer = "container:SiteTools.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
