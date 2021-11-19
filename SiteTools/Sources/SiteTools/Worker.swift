@@ -27,8 +27,23 @@ class Worker {
             let postNameTitlePart = item.title.lowercased().replacingOccurrences(of: " ", with: "-")
             let postName =  postNameDatePart + "-" + postNameTitlePart + ".md"
             
+            let category = Array(
+                path
+                    .components(separatedBy: "/")
+                    .suffix(2)
+            )
+                .first ?? ""
+            
+            let contentSTR = "---\n" +
+            "layout: post\n" +
+            "title: \"\(item.title)\"\n" +
+            "date: \(item.date)\n" +
+            "category: \(category)\n" +
+            "tags: \(item.tags)\n" +
+            "---\n"
+            
             fileManager.createFile(atPath: sitePostsFolderAbsolutePath.appending("/\(postName)"),
-                                   contents: nil,
+                                   contents: contentSTR.data(using: .utf8),
                                    attributes: [:])
         }
     }
