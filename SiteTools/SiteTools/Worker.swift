@@ -1,4 +1,5 @@
 import Foundation
+import ShellOut
 
 class Worker {
     func start(projectRepoAbsolutePath: String,
@@ -46,6 +47,8 @@ class Worker {
                                    contents: contentSTR.data(using: .utf8),
                                    attributes: [:])
         }
+        
+        try shellOut(to: "bundle exec jekyll serve", at: projectRepoAbsolutePath)
     }
 }
 
