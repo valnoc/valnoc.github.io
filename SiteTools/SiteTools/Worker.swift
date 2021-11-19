@@ -4,53 +4,53 @@ class Worker {
     func start(projectRepoAbsolutePath: String,
                resourcesFolderPath: String,
                sitePostsFolderPath: String) throws {
-        let fileManager = FileManager.default
+        
+        try cleanupSitePostsFolder(sitePostsFolderPath: sitePostsFolderPath)
+        try copyResourcesToSitePostsFolder(projectRepoAbsolutePath: projectRepoAbsolutePath,
+                                           resourcesFolderPath: resourcesFolderPath,
+                                           sitePostsFolderPath: sitePostsFolderPath)
+    }
+}
 
+// MARK: - private
+extension Worker {
+    private func cleanupSitePostsFolder(sitePostsFolderPath: String) throws {
+        let fileManager = FileManager.default
+        try fileManager.removeItem(atPath: sitePostsFolderPath)
+        
+        try fileManager.createDirectory(atPath: sitePostsFolderPath,
+                                        withIntermediateDirectories: true,
+                                        attributes: nil)
+    }
+    
+    private func copyResourcesToSitePostsFolder(projectRepoAbsolutePath: String,
+                                                resourcesFolderPath: String,
+                                                sitePostsFolderPath: String) throws {
+        let fileManager = FileManager.default
         let resourcesFolderAbsolutePath = projectRepoAbsolutePath + resourcesFolderPath
+        
         guard let resourcesPathEnumerator = fileManager.enumerator(atPath: resourcesFolderAbsolutePath) else {
             print("failed to create enumerator for resources folder")
             throw NSError()
         }
-
-        var resourcesPaths = [String]()
-        while let path = resourcesPathEnumerator.nextObject() as? String {
-            guard path.hasSuffix(".json") else { continue }
-            resourcesPaths.append(resourcesFolderAbsolutePath.appending("/\(path)"))
-        }
         
         let sitePostsFolderAbsolutePath = projectRepoAbsolutePath + sitePostsFolderPath
-        
-        for path in resourcesPaths {
-            let item: ResourceItem = try decodeJsonObject(path)
+        while let path = resourcesPathEnumerator.nextObject() as? String {
+            guard path.hasSuffix(".json") else { continue }
+            let fullPath = resourcesFolderAbsolutePath.appending("/\(path)")
             
-            let postNameDatePart = (item.date.split(separator: " ").first ?? "")
-            let postNameTitlePart = item.title.lowercased().replacingOccurrences(of: " ", with: "-")
-            let postName =  postNameDatePart + "-" + postNameTitlePart + ".md"
+            let item: ResourceItem = try decodeJsonObject(fullPath)
+            let post = JekyllSite.Post(resourceItem: item,
+                                       resourceItemFullPath: fullPath)
             
-            let category = Array(
-                path
-                    .components(separatedBy: "/")
-                    .suffix(2)
-            )
-                .first ?? ""
-            
-            let contentSTR = "---\n" +
-            "layout: post\n" +
-            "title: \"\(item.title)\"\n" +
-            "date: \(item.date)\n" +
-            "category: \(category)\n" +
-            "tags: \(item.tags)\n" +
-            "---\n" +
-            "[LINK](\(item.link))"
-            
-            fileManager.createFile(atPath: sitePostsFolderAbsolutePath.appending("/\(postName)"),
-                                   contents: contentSTR.data(using: .utf8),
+            fileManager.createFile(atPath: sitePostsFolderAbsolutePath.appending("/\(post.name())"),
+                                   contents: post.content().data(using: .utf8),
                                    attributes: [:])
         }
     }
 }
 
-// MARK: - private
+// MARK: - private tools
 extension Worker {
     private func decodeJsonObject<T: Decodable>(_ path: String) throws -> T {
         try JSONDecoder().decode(T.self,
