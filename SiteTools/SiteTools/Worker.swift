@@ -5,7 +5,8 @@ class Worker {
                resourcesFolderPath: String,
                sitePostsFolderPath: String) throws {
         
-        try cleanupSitePostsFolder(sitePostsFolderPath: sitePostsFolderPath)
+        try cleanupSitePostsFolder(projectRepoAbsolutePath: projectRepoAbsolutePath,
+                                   sitePostsFolderPath: sitePostsFolderPath)
         try copyResourcesToSitePostsFolder(projectRepoAbsolutePath: projectRepoAbsolutePath,
                                            resourcesFolderPath: resourcesFolderPath,
                                            sitePostsFolderPath: sitePostsFolderPath)
@@ -14,11 +15,12 @@ class Worker {
 
 // MARK: - private
 extension Worker {
-    private func cleanupSitePostsFolder(sitePostsFolderPath: String) throws {
+    private func cleanupSitePostsFolder(projectRepoAbsolutePath: String,
+                                        sitePostsFolderPath: String) throws {
         let fileManager = FileManager.default
-        try fileManager.removeItem(atPath: sitePostsFolderPath)
+        try fileManager.removeItem(atPath: projectRepoAbsolutePath + sitePostsFolderPath)
         
-        try fileManager.createDirectory(atPath: sitePostsFolderPath,
+        try fileManager.createDirectory(atPath: projectRepoAbsolutePath + sitePostsFolderPath,
                                         withIntermediateDirectories: true,
                                         attributes: nil)
     }
