@@ -42,11 +42,11 @@ extension Worker {
             let fullPath = resourcesFolderAbsolutePath.appending("/\(path)")
             
             let item: ResourceItem = try decodeJsonObject(fullPath)
-            let post = JekyllSite.Post(resourceItem: item,
-                                       resourceItemFullPath: fullPath)
+            let post = JekyllSite.Post(item: item,
+                                       itemFullPath: fullPath)
             
-            fileManager.createFile(atPath: sitePostsFolderAbsolutePath.appending("/\(post.name())"),
-                                   contents: post.content().data(using: .utf8),
+            fileManager.createFile(atPath: sitePostsFolderAbsolutePath.appending("/\(post.name)"),
+                                   contents: post.content.data(using: .utf8),
                                    attributes: [:])
         }
     }
