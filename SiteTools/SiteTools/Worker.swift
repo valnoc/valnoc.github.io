@@ -1,5 +1,4 @@
 import Foundation
-import ShellOut
 
 class Worker {
     func start(projectRepoAbsolutePath: String,
@@ -41,14 +40,13 @@ class Worker {
             "date: \(item.date)\n" +
             "category: \(category)\n" +
             "tags: \(item.tags)\n" +
-            "---\n"
+            "---\n" +
+            "[LINK](\(item.link))"
             
             fileManager.createFile(atPath: sitePostsFolderAbsolutePath.appending("/\(postName)"),
                                    contents: contentSTR.data(using: .utf8),
                                    attributes: [:])
         }
-        
-        try shellOut(to: "bundle exec jekyll serve", at: projectRepoAbsolutePath)
     }
 }
 

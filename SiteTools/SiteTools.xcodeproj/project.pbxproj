@@ -10,7 +10,6 @@
 		5B9FE09C2747B144002BF8DD /* Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9FE0992747B143002BF8DD /* Worker.swift */; };
 		5B9FE09D2747B144002BF8DD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9FE09A2747B144002BF8DD /* main.swift */; };
 		5B9FE09E2747B144002BF8DD /* ResourceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9FE09B2747B144002BF8DD /* ResourceItem.swift */; };
-		5B9FE0A12747B224002BF8DD /* ShellOut in Frameworks */ = {isa = PBXBuildFile; productRef = 5B9FE0A02747B224002BF8DD /* ShellOut */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,7 +36,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B9FE0A12747B224002BF8DD /* ShellOut in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,7 +85,6 @@
 			);
 			name = SiteTools;
 			packageProductDependencies = (
-				5B9FE0A02747B224002BF8DD /* ShellOut */,
 			);
 			productName = SiteTools;
 			productReference = 5B9FE08F2747B118002BF8DD /* SiteTools */;
@@ -118,7 +115,6 @@
 			);
 			mainGroup = 5B9FE0862747B118002BF8DD;
 			packageReferences = (
-				5B9FE09F2747B224002BF8DD /* XCRemoteSwiftPackageReference "ShellOut" */,
 			);
 			productRefGroup = 5B9FE0902747B118002BF8DD /* Products */;
 			projectDirPath = "";
@@ -298,25 +294,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		5B9FE09F2747B224002BF8DD /* XCRemoteSwiftPackageReference "ShellOut" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/JohnSundell/ShellOut.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		5B9FE0A02747B224002BF8DD /* ShellOut */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 5B9FE09F2747B224002BF8DD /* XCRemoteSwiftPackageReference "ShellOut" */;
-			productName = ShellOut;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5B9FE0872747B118002BF8DD /* Project object */;
 }
