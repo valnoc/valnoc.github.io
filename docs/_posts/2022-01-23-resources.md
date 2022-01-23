@@ -14,10 +14,11 @@ category: articles
 - *#lens #prism*
 
 # Tools
-- [The Ultimate Guide To iPhone Resolutions](https://www.paintcodeapp.com/news/ultimate-guide-to-iphone-resolutions)
+- [Screen Sizes](https://www.screensizes.app/?source=compare)
 - [Online regex tester and debugger](https://regex101.com)
 - [RxMarbles](https://rxmarbles.com)
 - [Custom Haptics designer](https://ahap.fancypixel.it)
+- [Learn Git](https://learngitbranching.js.org/?locale=ru_RU)
 
 # Code Practices
 - [You Might Not Want a Boolean](https://matt.diephouse.com/2020/05/you-might-not-want-a-boolean/)
