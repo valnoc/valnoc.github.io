@@ -1,8 +1,0 @@
----
-layout: post
-title: "Mobile App Design: 14 Trendy Color Schemes"
-date: 2020-08-01
-category: articles
-tags: ["design"]
----
-[LINK](https://medium.com/@Adoriasoft/mobile-app-design-14-trendy-color-schemes-2669b5bb77d3)
