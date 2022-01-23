@@ -5,17 +5,15 @@ date: 2022-01-23
 category: articles
 ---
 
-- #method_dispatch
-- #struct 
-- #memory
-- #security
-- #core_data
-- #algo
-- #ios13
-- #core_bluetooth
-- #runloop
+- *#method_dispatch #algo #struct #memory*
+- *#security*
+- *#core_data*
+- *#ios13 #ios15*
+- *#core_bluetooth*
+- *#runloop*
+- *#lens #prism*
 
-# Clean Code
+# Code Practices
 - [You Might Not Want a Boolean](https://matt.diephouse.com/2020/05/you-might-not-want-a-boolean/)
 - [Save your next app from rebuilding from scratch](https://nalexn.github.io/save-your-next-app/)
 
@@ -23,6 +21,7 @@ category: articles
 - [Layers, Onions, Ports, Adapters: it's all the same](https://blog.ploeh.dk/2013/12/03/layers-onions-ports-adapters-its-all-the-same/)
 - [Type Erasers in Swift](https://chris.eidhof.nl/post/type-erasers-in-swift/)
 - [Coordinator pattern in iOS 13 world](https://aplus.rs/2020/coordinator-pattern-for-ios13/) *#ios13*
+- [Lenses and Prisms in Swift: a pragmatic approach](https://broomburgo.github.io/fun-ios/post/lenses-and-prisms-in-swift-a-pragmatic-approach/) *#lens #prism*
 
 # Swift
 - [Stop Using Structs!](https://medium.com/commencis/stop-using-structs-e1be9a86376f) *#struct #memory*
@@ -35,6 +34,8 @@ category: articles
 - [Swift Protocol Extensions Method Dispatch](https://medium.com/@leandromperez/protocol-extensions-gotcha-9ef1a42c83b6) *#method_dispatch*
 - [Method Dispatch in Swift](https://www.rightpoint.com/rplabs/switch-method-dispatch-table) *#method_dispatch*
 - [Static vs Dynamic Dispatch in Swift: A decisive choice](https://medium.com/flawless-app-stories/static-vs-dynamic-dispatch-in-swift-a-decisive-choice-cece1e872d) *#method_dispatch*
+- [Demystifying Swift protocol extensions with default parameters](https://medium.com/@lorenzogreco/demystifying-swift-protocol-extensions-with-default-parameters-1a482d7bdba7) *#method_dispatch*
+- [How Hashable works in Swift](https://swiftrocks.com/how-hashable-works-in-swift.html)
 
 # Concurrency
 
@@ -51,12 +52,22 @@ category: articles
 - [Reducing Memory Footprint When Using UIImage](https://swiftsenpai.com/development/reduce-uiimage-memory-footprint/) *#memory*
 - [Understanding Scene Delegate & App Delegate](https://medium.com/@kalyan.parise/understanding-scene-delegate-app-delegate-7503d48c5445)
 - [The Ultimate Guide to the SwiftUI 2 Application Life Cycle](https://peterfriese.dev/ultimate-guide-to-swiftui2-application-lifecycle/?utm_campaign=iOS%2BDev%2BWeekly&utm_medium=email&utm_source=iOS%2BDev%2BWeekly%2BIssue%2B477)
-- [UIButton: Padding Between Image and Text](https://noahgilmore.com/blog/uibutton-padding/)
 - [Dive into CFRunLoop](https://suelan.github.io/2021/02/13/20210213-dive-into-runloop-ios/?utm_campaign=iOS%2BDev%2BWeekly&utm_medium=email&utm_source=iOS%2BDev%2BWeekly%2BIssue%2B495) *#runloop*
+- [URLSession: Common pitfalls with background download & upload tasks](https://www.avanderlee.com/swift/urlsession-common-pitfalls-with-background-download-upload-tasks/)
+
+# UI
+- [UIButton: Padding Between Image and Text](https://noahgilmore.com/blog/uibutton-padding/)
+- [Button Configuration in iOS 15](https://useyourloaf.com/blog/button-configuration-in-ios-15/) *#ios15*
+
+# SwiftUI
+- [The @ScaledMetric Property Wrapper](https://useyourloaf.com/blog/the-scaledmetric-property-wrapper/)
+- [How to show and hide content with DisclosureGroup using SwiftUI](https://kristaps.me/blog/swiftui-disclosure-group/)
+
 
 # Maps
 - [Bing Maps Tile System](https://docs.microsoft.com/en-us/bingmaps/articles/bing-maps-tile-system)
 
 # UX / Design
+- [Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/ios/overview/themes/#//apple_ref/doc/uid/TP40006556-CH66-SW1)
 - [Mobile App Design: 14 Trendy Color Schemes](https://medium.com/@Adoriasoft/mobile-app-design-14-trendy-color-schemes-2669b5bb77d3)
 
