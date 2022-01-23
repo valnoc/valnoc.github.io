@@ -12,6 +12,7 @@ category: articles
 - *#core_bluetooth*
 - *#runloop*
 - *#lens #prism*
+- *#book*
 
 # Tools
 - [Screen Sizes](https://www.screensizes.app/?source=compare)
@@ -29,6 +30,9 @@ category: articles
 - [Type Erasers in Swift](https://chris.eidhof.nl/post/type-erasers-in-swift/)
 - [Coordinator pattern in iOS 13 world](https://aplus.rs/2020/coordinator-pattern-for-ios13/) *#ios13*
 - [Lenses and Prisms in Swift: a pragmatic approach](https://broomburgo.github.io/fun-ios/post/lenses-and-prisms-in-swift-a-pragmatic-approach/) *#lens #prism*
+- [Elegant Objects. Vol 1.](https://www.amazon.com/gp/product/1519166915/ref=dbs_a_def_rwt_hsch_vapi_taft_p1_i1) *#book*
+- [Elegant Objects. Vol 2.](https://www.amazon.com/gp/product/1534908307/ref=dbs_a_def_rwt_hsch_vapi_taft_p1_i0) *#book*
+- [The evolution of the Repository Pattern - Be aware of over abstraction](http://hannesdorfmann.com/android/evolution-of-the-repository-pattern/)
 
 # Swift
 - [Stop Using Structs!](https://medium.com/commencis/stop-using-structs-e1be9a86376f) *#struct #memory*
@@ -43,6 +47,8 @@ category: articles
 - [Static vs Dynamic Dispatch in Swift: A decisive choice](https://medium.com/flawless-app-stories/static-vs-dynamic-dispatch-in-swift-a-decisive-choice-cece1e872d) *#method_dispatch*
 - [Demystifying Swift protocol extensions with default parameters](https://medium.com/@lorenzogreco/demystifying-swift-protocol-extensions-with-default-parameters-1a482d7bdba7) *#method_dispatch*
 - [How Hashable works in Swift](https://swiftrocks.com/how-hashable-works-in-swift.html)
+- [A DSL for state machines in Swift](https://twittemb.github.io/posts/2021-02-13-StateMachineDSL/)
+- [Память в Swift от 0 до 1](https://habr.com/ru/company/hh/blog/546856/) *#memory*
 
 # Concurrency
 
@@ -61,6 +67,7 @@ category: articles
 - [The Ultimate Guide to the SwiftUI 2 Application Life Cycle](https://peterfriese.dev/ultimate-guide-to-swiftui2-application-lifecycle/?utm_campaign=iOS%2BDev%2BWeekly&utm_medium=email&utm_source=iOS%2BDev%2BWeekly%2BIssue%2B477)
 - [Dive into CFRunLoop](https://suelan.github.io/2021/02/13/20210213-dive-into-runloop-ios/?utm_campaign=iOS%2BDev%2BWeekly&utm_medium=email&utm_source=iOS%2BDev%2BWeekly%2BIssue%2B495) *#runloop*
 - [URLSession: Common pitfalls with background download & upload tasks](https://www.avanderlee.com/swift/urlsession-common-pitfalls-with-background-download-upload-tasks/)
+- [Универсальные ссылки: дворец из подводных камней](https://habr.com/ru/company/jugru/blog/352914/)
 
 # UI
 - [UIButton: Padding Between Image and Text](https://noahgilmore.com/blog/uibutton-padding/)
