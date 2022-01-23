@@ -13,6 +13,12 @@ category: articles
 - *#runloop*
 - *#lens #prism*
 
+# Tools
+- [The Ultimate Guide To iPhone Resolutions](https://www.paintcodeapp.com/news/ultimate-guide-to-iphone-resolutions)
+- [Online regex tester and debugger](https://regex101.com)
+- [RxMarbles](https://rxmarbles.com)
+- [Custom Haptics designer](https://ahap.fancypixel.it)
+
 # Code Practices
 - [You Might Not Want a Boolean](https://matt.diephouse.com/2020/05/you-might-not-want-a-boolean/)
 - [Save your next app from rebuilding from scratch](https://nalexn.github.io/save-your-next-app/)
